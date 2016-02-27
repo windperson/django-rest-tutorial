@@ -27,3 +27,6 @@ To run this project:
   ```
 
 Then use browser to http://localhost/users/
+
+---
+To run it in chaussette managed by circus:

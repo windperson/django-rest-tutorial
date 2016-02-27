@@ -1,6 +1,7 @@
 FROM python:3-slim
-RUN pip install --upgrade pip
-RUN pip install django djangorestframework httpie
+RUN apt-get update && apt-get install -y g++ libzmq-dev libevent-dev
+RUN pip install --upgrade pip setuptools
+RUN pip install chaussette circus django djangorestframework httpie
 WORKDIR /tutorial
 VOLUME ['/tutorial']
 EXPOSE 8000
